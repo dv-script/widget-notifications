@@ -16,7 +16,7 @@ export default function IconNotification({ selectedIcon }:IconNotificationProps)
         <>
             {typeIcons.map((item) => {              
                 const key = Object.keys(item)[0]; 
-                const component = item[selectedIcon]; 
+                const component = item[selectedIcon];
                 if (component) { 
                     return (
                         <div key={key} className="m-auto">
