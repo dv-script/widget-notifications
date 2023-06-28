@@ -1,5 +1,5 @@
-import Feed from "../Feed/Feed";
-import Notification from "../Notification/Notification";
+import Feed from "../Feed";
+import Notification from "../Notification";
 
 export default function Widget() {
     return (
@@ -11,7 +11,17 @@ export default function Widget() {
                 <button className="text-violet-500 font-bold text-xs uppercase hover:text-violet-400">Mark all as read</button>
             </header>
 
-            <Feed>
+            <Feed feedTitle="Recents">
+                <Notification 
+                    hoursAgo={2}
+                    typeNotification="Invatation"
+                    textNotification="You have received an invitation to join the Rocketseat company."
+                />
+                <Notification 
+                    hoursAgo={2}
+                    typeNotification="Invatation"
+                    textNotification="You have received an invitation to join the Rocketseat company."
+                />
                 <Notification 
                     hoursAgo={2}
                     typeNotification="Invatation"
