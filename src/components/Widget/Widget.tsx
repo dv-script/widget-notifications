@@ -14,21 +14,22 @@ export default function Widget() {
             <Feed feedTitle="Recents">
                 <Notification 
                     hoursAgo={2}
-                    typeNotification="Invatation"
+                    typeNotification="Rocket"
                     textNotification="You have received an invitation to join the Rocketseat company."
                 />
                 <Notification 
-                    hoursAgo={2}
-                    typeNotification="Invatation"
-                    textNotification="You have received an invitation to join the Rocketseat company."
-                />
-                <Notification 
-                    hoursAgo={2}
-                    typeNotification="Invatation"
-                    textNotification="You have received an invitation to join the Rocketseat company."
+                    hoursAgo={1}
+                    typeNotification="Chat"
+                    textNotification="You have received a message."
                 />
             </Feed>
-
+            <Feed feedTitle="Latest">
+                <Notification
+                    hoursAgo={2}
+                    typeNotification="Chat"
+                    textNotification="You have received a message."
+                />
+            </Feed>
         </div>
     )
 }

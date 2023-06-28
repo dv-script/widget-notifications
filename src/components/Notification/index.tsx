@@ -8,10 +8,10 @@ import Actions from "../Actions";
 import IconNotification from "../IconNotification";
 
 export default function Notification({ hoursAgo, typeNotification, textNotification }:PropsWithChildren<NotificationProps>) {
-    const [showActions, setShowActions] = useState(false);
+    const [showActions, setShowActions] = useState(true);
 
     useEffect(() => {
-        setShowActions(true);
+        setShowActions(false);
     }, []);
 
     const toggleActions = () => {
@@ -22,7 +22,7 @@ export default function Notification({ hoursAgo, typeNotification, textNotificat
         <>
             <div className="bg-zinc-200 dark:bg-text px-8 py-4 flex items-start gap-6 cursor-pointer" onClick={toggleActions}>
                 <IconNotification 
-                    selectedIcon="User"
+                    selectedIcon={typeNotification}
                 />
                 <div className="flex-1 flex flex-col gap-2">
                     <p className="text-sm leading-relaxed text-zinc-800 dark:text-zinc-100">{textNotification}</p>
@@ -33,8 +33,9 @@ export default function Notification({ hoursAgo, typeNotification, textNotificat
                 </div>
                 {showActions && (
                     <motion.div
-                        initial={{ opacity: 0, y: '50%' }}
-                        animate={{ opacity: 1, y: '50%', transition: { duration: 0.2 } }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1, transition: { duration: 0.2 } }}
+                        className="m-auto"
                     >
                         <Actions />
                     </motion.div>
