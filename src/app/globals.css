@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    -webkit-font-smoothing: anti-aliased;
+  -webkit-font-smoothing: anti-aliased;
+}
+
+.swiperToRight {
+  animation: swiperToRight 600ms ease-in;
+}
+
+@keyframes swiperToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
 }
