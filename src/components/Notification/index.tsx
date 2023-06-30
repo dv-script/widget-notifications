@@ -39,7 +39,7 @@ export default function Notification({
   return (
     <div
       id={id}
-      className="notification bg-zinc-200 dark:bg-text px-8 py-4 flex items-start gap-6 cursor-pointer"
+      className="notification bg-zinc-200 dark:bg-notification px-8 py-4 flex items-start gap-6 cursor-pointer"
       onClick={toggleOptions}
     >
       <IconNotification selectedIcon={icon} />

@@ -8,9 +8,9 @@ export default function EmptyNotification() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
     >
-      <div className="bg-zinc-200 dark:bg-text px-8 py-4 flex items-center justify-center gap-2">
-        <Squirrel className="inline-block text-zinc-800" size={24} />
-        <p className="text-lg text-center leading-relaxed text-zinc-800 dark:text-zinc-800">
+      <div className="bg-zinc-200 dark:bg-notification text-zinc-400 dark:text-zinc-700 px-8 py-4 flex items-center justify-center gap-2">
+        <Squirrel className="inline-block dark:text-zinc-700" size={24} />
+        <p className="text-lg text-center leading-relaxed">
           Empty
         </p>
       </div>

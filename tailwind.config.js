@@ -19,7 +19,7 @@ module.exports = {
         'background': '#0D0D0D',
         'recent-header': '#121214',
         'header': '#2F2F33',
-        'text': '#202024',
+        'notification': '#202024',
       },
     },
   },
