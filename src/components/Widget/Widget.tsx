@@ -50,52 +50,58 @@ export default function Widget() {
         />
       </header>
       <Feed feedTitle="Recents">
-        { notificationsList1.length !== 0 ? (
-            notificationsList1.map(
-          ({ id, hoursAgo, icon, textNotification, typeNotification }) => (
-            <Notification
-              clicked={(identificator) => {
-                setTimeout(() => {
-                  setNotificationsList1((prev) =>
-                    prev.filter(({ id }) => id !== identificator)
-                  );
-                }, 600);
-                return id;
-              }}
-              id={id}
-              key={id}
-              hoursAgo={hoursAgo}
-              icon={icon}
-              typeNotification={typeNotification}
-              textNotification={textNotification}
-              showFeed={showFeed}
-            />
+        {notificationsList1.length !== 0 ? (
+          notificationsList1.map(
+            ({ id, hoursAgo, icon, textNotification, typeNotification }) => (
+              <Notification
+                clicked={(identificator) => {
+                  setTimeout(() => {
+                    setNotificationsList1((prev) =>
+                      prev.filter(({ id }) => id !== identificator)
+                    );
+                  }, 600);
+                  return id;
+                }}
+                id={id}
+                key={id}
+                hoursAgo={hoursAgo}
+                icon={icon}
+                typeNotification={typeNotification}
+                textNotification={textNotification}
+                showFeed={showFeed}
+              />
+            )
           )
-        )): <EmptyNotification />}
+        ) : (
+          <EmptyNotification />
+        )}
       </Feed>
       <Feed feedTitle="Latest">
-      { notificationsList2.length !== 0 ? (
-            notificationsList2.map(
-          ({ id, hoursAgo, icon, textNotification, typeNotification }) => (
-            <Notification
-              clicked={(identificator) => {
-                setTimeout(() => {
-                  setNotificationsList2((prev) =>
-                    prev.filter(({ id }) => id !== identificator)
-                  );
-                }, 600);
-                return id;
-              }}
-              id={id}
-              key={id}
-              hoursAgo={hoursAgo}
-              icon={icon}
-              typeNotification={typeNotification}
-              textNotification={textNotification}
-              showFeed={showFeed}
-            />
+        {notificationsList2.length !== 0 ? (
+          notificationsList2.map(
+            ({ id, hoursAgo, icon, textNotification, typeNotification }) => (
+              <Notification
+                clicked={(identificator) => {
+                  setTimeout(() => {
+                    setNotificationsList2((prev) =>
+                      prev.filter(({ id }) => id !== identificator)
+                    );
+                  }, 600);
+                  return id;
+                }}
+                id={id}
+                key={id}
+                hoursAgo={hoursAgo}
+                icon={icon}
+                typeNotification={typeNotification}
+                textNotification={textNotification}
+                showFeed={showFeed}
+              />
+            )
           )
-        )): <EmptyNotification />}
+        ) : (
+          <EmptyNotification />
+        )}
       </Feed>
     </div>
   );

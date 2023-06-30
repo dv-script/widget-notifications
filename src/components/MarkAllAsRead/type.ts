@@ -1,3 +1,3 @@
 export interface MarkAllAsReadProps {
-    setAllAsRead: Function;
+  setAllAsRead: Function;
 }

@@ -61,7 +61,11 @@ export default function Notification({
           animate={{ opacity: 1, transition: { duration: 0.1 } }}
           className="m-auto"
         >
-          {icon === "Chat" ? <Dismiss clicked={handleClick}/> : <Actions clicked={handleClick} />}
+          {icon === "Chat" ? (
+            <Dismiss clicked={handleClick} />
+          ) : (
+            <Actions clicked={handleClick} />
+          )}
         </motion.div>
       )}
     </div>

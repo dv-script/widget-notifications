@@ -1,3 +1,3 @@
 export interface ActionsProps {
-    clicked: () => void;
+  clicked: () => void;
 }

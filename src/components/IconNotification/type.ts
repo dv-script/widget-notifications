@@ -1,7 +1,7 @@
 export interface IconNotificationProps {
-    selectedIcon : string;
+  selectedIcon: string;
 }
 
 export interface TypeIconsProps {
-    [key: string]: JSX.Element;
-  }
+  [key: string]: JSX.Element;
+}
